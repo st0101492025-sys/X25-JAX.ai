@@ -2,6 +2,7 @@
 
 Thera AI is an experimental project built with [Jaclang](https://jaclang.org/) that explores AI-driven reasoning and interactive agents.  
 This repo contains the `thera_ai.jac` program, which serves as the foundation for future AI-enhanced applications.
+Meet Thera AI, your onestop therapist AI, with embedded openai api key, this model guides you through tough times. Also a bonus is inside Thera Tutor😁😁🫡👌
 
 ---
 
@@ -65,3 +66,4 @@ Use Jaclang’s docs
  for advanced features.
 
 ⚡ Tip: If you’re using WSL (Ubuntu on Windows), make sure you’ve activated your virtual environment inside WSL, not Windows PowerShell.
+
