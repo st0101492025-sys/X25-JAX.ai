@@ -11,19 +11,27 @@ def generate_advice_response(advice: str) -> str by llm();
 def generate_tutor_response(tutor: str) -> str by llm();
 
 with entry {
-    user_feeling = "I feel overwhelmed and stuck.";
-    response = generate_therapeutic_response(user_feeling);
-    print(f"TheraAI says: {response}");
-}
+    print("🧠 Welcome to Thera.AI — your AI companion!");
+    print("Choose a mode:");
+    print("1. Therapeutic");
+    print("2. Advice");
+    print("3. Tutor");
 
-with entry {
-    user_advice ="I need your advice regarding my broken relationship";
-    response_one = generate_advice_response(user_advice);
-    print(f"Thera ADV says: {response_one}");
-}
+    mode = input("Enter number (1–3): ").strip();
 
-with entry {
-    user_tutor ="I want you to teach me jaclang, from jaclang.org";
-    response_two = generate_tutor_response(user_tutor);
-    print(f"Thera Tutor says: {response_two}");
+    if mode == "1" {
+        user_feeling = input("How are you feeling today? ");
+        response = generate_therapeutic_response(user_feeling);
+        print(f"💬 TheraAI says: {response}");
+    } elif mode == "2" {
+        user_advice = input("What advice do you need? ");
+        response_one = generate_advice_response(user_advice);
+        print(f"💡 Thera Advice says: {response_one}");
+    } elif mode == "3" {
+        user_tutor = input("What topic do you want to learn? ");
+        response_two = generate_tutor_response(user_tutor);
+        print(f"📘 Thera Tutor says: {response_two}");
+    } else {
+        print("❌ Invalid choice. Please run again and pick 1, 2, or 3.");
+    }
 }
